@@ -43,6 +43,7 @@ namespace Call_Manager
             operatorMDIChild.MdiParent = this;
             // Display the new form.
             operatorMDIChild.Show();
+            operatorMDIChild.Location = new Point(12, 45);
         }
 
         private void labelTierTab_Click(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace Call_Manager
             tierMDIChild.MdiParent = this;
             // Display the new form.
             tierMDIChild.Show();
+            tierMDIChild.Location = new Point(12, 45);
         }
 
         private void MasterView_Load(object sender, EventArgs e)
