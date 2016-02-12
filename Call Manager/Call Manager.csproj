@@ -70,6 +70,12 @@
     <Compile Include="Forms\Browser.Designer.cs">
       <DependentUpon>Browser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterView.Designer.cs">
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CallInfo.resx">
       <DependentUpon>CallInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterView.resx">
+      <DependentUpon>MasterView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewChanger.resx">
       <DependentUpon>ViewChanger.cs</DependentUpon>

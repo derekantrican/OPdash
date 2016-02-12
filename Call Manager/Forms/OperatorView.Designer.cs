@@ -46,8 +46,6 @@
             this.labelTier1Count = new System.Windows.Forms.Label();
             this.pictureBoxOperatorNext = new System.Windows.Forms.PictureBox();
             this.pictureBoxTier2Next = new System.Windows.Forms.PictureBox();
-            this.webBrowserOperator = new System.Windows.Forms.WebBrowser();
-            this.webBrowserTier2 = new System.Windows.Forms.WebBrowser();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
@@ -248,28 +246,6 @@
             this.pictureBoxTier2Next.TabIndex = 16;
             this.pictureBoxTier2Next.TabStop = false;
             // 
-            // webBrowserOperator
-            // 
-            this.webBrowserOperator.Location = new System.Drawing.Point(20, 172);
-            this.webBrowserOperator.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserOperator.Name = "webBrowserOperator";
-            this.webBrowserOperator.ScrollBarsEnabled = false;
-            this.webBrowserOperator.Size = new System.Drawing.Size(307, 126);
-            this.webBrowserOperator.TabIndex = 17;
-            this.webBrowserOperator.Url = new System.Uri("https://script.google.com/macros/s/AKfycby2TVTF693Dtlhww2ElUWmp1jL3DXCYBQPdWjf33H" +
-        "GRNWD7uF0/exec", System.UriKind.Absolute);
-            // 
-            // webBrowserTier2
-            // 
-            this.webBrowserTier2.Location = new System.Drawing.Point(350, 172);
-            this.webBrowserTier2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserTier2.Name = "webBrowserTier2";
-            this.webBrowserTier2.ScrollBarsEnabled = false;
-            this.webBrowserTier2.Size = new System.Drawing.Size(303, 126);
-            this.webBrowserTier2.TabIndex = 18;
-            this.webBrowserTier2.Url = new System.Uri("https://script.google.com/macros/s/AKfycbxns1C92ffmLPGB8jlaDgUKx0BWNLYg2t2WWkaRQt" +
-        "_sz2so-ys/exec", System.UriKind.Absolute);
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Call_Manager.Properties.Resources.gearWhite;
@@ -313,11 +289,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(672, 315);
+            this.ControlBox = false;
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.webBrowserTier2);
-            this.Controls.Add(this.webBrowserOperator);
             this.Controls.Add(this.pictureBoxTier2Next);
             this.Controls.Add(this.pictureBoxOperatorNext);
             this.Controls.Add(this.labelTier1);
@@ -334,6 +309,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.newTicket);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OperatorView";
             this.Text = "Operator View";
             this.Load += new System.EventHandler(this.OperatorView_Load);
@@ -370,8 +346,6 @@
         private System.Windows.Forms.Label labelTier1Count;
         private System.Windows.Forms.PictureBox pictureBoxOperatorNext;
         private System.Windows.Forms.PictureBox pictureBoxTier2Next;
-        private System.Windows.Forms.WebBrowser webBrowserOperator;
-        private System.Windows.Forms.WebBrowser webBrowserTier2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelUser;

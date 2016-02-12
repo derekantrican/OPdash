@@ -119,10 +119,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1175, 521);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureboxSettings);
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TierView";
             this.Text = "Tier View";
             this.Load += new System.EventHandler(this.TierView_Load);

@@ -16,7 +16,7 @@ namespace Call_Manager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            ViewChanger ViewWindow = new ViewChanger();
+            MasterView ViewWindow = new MasterView();
             ViewWindow.Show();
             Application.Run();
         }
