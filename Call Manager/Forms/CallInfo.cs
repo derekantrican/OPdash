@@ -74,5 +74,10 @@ namespace Call_Manager
         {
 
         }
+
+        private void CallInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

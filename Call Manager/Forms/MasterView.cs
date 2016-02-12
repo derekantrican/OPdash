@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -32,20 +33,30 @@ namespace Call_Manager
 
         private void labelOperatorTab_Click(object sender, EventArgs e)
         {
-            OperatorView newMDIChild = new OperatorView();
+            if (this.ActiveMdiChild != null && this.ActiveMdiChild.Text.ToString() == "Tier View")
+            {
+                this.ActiveMdiChild.Close();
+            }         
+
+            OperatorView operatorMDIChild = new OperatorView();
             // Set the Parent Form of the Child window.
-            newMDIChild.MdiParent = this;
+            operatorMDIChild.MdiParent = this;
             // Display the new form.
-            newMDIChild.Show();
+            operatorMDIChild.Show();
         }
 
         private void labelTierTab_Click(object sender, EventArgs e)
         {
-            TierView newMDIChild = new TierView();
+            if (this.ActiveMdiChild != null && this.ActiveMdiChild.Text.ToString() == "Operator View")
+            {
+                this.ActiveMdiChild.Close();
+            }
+
+            TierView tierMDIChild = new TierView();
             // Set the Parent Form of the Child window.
-            newMDIChild.MdiParent = this;
+            tierMDIChild.MdiParent = this;
             // Display the new form.
-            newMDIChild.Show();
+            tierMDIChild.Show();
         }
 
         private void MasterView_Load(object sender, EventArgs e)

@@ -24,16 +24,6 @@ namespace Call_Manager
             toolTip1.SetToolTip(this.Clock, "Brandon wanted a \"Big Ass Clock\"");
 
             labelUser.Text = "Welcome back, " + Environment.UserName + "!";
-
-            this.FormClosing += OperatorView_FormClosing;
-        }
-
-        private void OperatorView_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ChangeView)
-            {
-                Application.Exit();
-            }
         }
 
         private void OperatorView_Load(object sender, EventArgs e)

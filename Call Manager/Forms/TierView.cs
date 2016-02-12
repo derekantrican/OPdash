@@ -25,16 +25,6 @@ namespace Call_Manager
             toolTip1.SetToolTip(this.Clock, "Brandon wanted a \"Big Ass Clock\"");
 
             labelUser.Text = "Welcome back, " + Environment.UserName + "!";
-
-            this.FormClosing += TierView_FormClosing;
-        }
-
-        private void TierView_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ChangeView)
-            {
-                Application.Exit();
-            }
         }
 
         private void TierView_Load(object sender, EventArgs e)

@@ -223,6 +223,7 @@
             this.Controls.Add(this.buttonSend);
             this.Name = "CallInfo";
             this.Text = "Call Info";
+            this.Load += new System.EventHandler(this.CallInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
