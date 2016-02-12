@@ -21,7 +21,7 @@ namespace Call_Manager
             InitializeComponent();
             ChangeView = false;
 
-            toolTip1.SetToolTip(this.Clock, "Brandon wanted a \"Big Ass Clock\"");
+            toolTip1.SetToolTip(this.Clock, "Brandon wanted a \"Big Ass Clock\""); //Easter Egg
 
             labelUser.Text = "Welcome back, " + Environment.UserName + "!";
 
