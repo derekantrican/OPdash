@@ -66,7 +66,7 @@
             // pictureBoxSettings
             // 
             this.pictureBoxSettings.Image = global::Call_Manager.Properties.Resources.gearWhite;
-            this.pictureBoxSettings.Location = new System.Drawing.Point(1183, 1);
+            this.pictureBoxSettings.Location = new System.Drawing.Point(1055, 0);
             this.pictureBoxSettings.Name = "pictureBoxSettings";
             this.pictureBoxSettings.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxSettings.TabIndex = 4;
@@ -78,7 +78,7 @@
             this.Clock.BackColor = System.Drawing.Color.Transparent;
             this.Clock.Font = new System.Drawing.Font("Courier New", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock.ForeColor = System.Drawing.Color.Red;
-            this.Clock.Location = new System.Drawing.Point(992, 2);
+            this.Clock.Location = new System.Drawing.Point(864, 2);
             this.Clock.Name = "Clock";
             this.Clock.Size = new System.Drawing.Size(185, 40);
             this.Clock.TabIndex = 5;
@@ -94,15 +94,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1209, 632);
+            this.ClientSize = new System.Drawing.Size(1084, 632);
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.pictureBoxSettings);
             this.Controls.Add(this.labelTierTab);
             this.Controls.Add(this.labelOperatorTab);
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1225, 671);
-            this.MinimumSize = new System.Drawing.Size(1225, 671);
+            this.MaximumSize = new System.Drawing.Size(1100, 671);
+            this.MinimumSize = new System.Drawing.Size(1100, 671);
             this.Name = "MasterView";
             this.Text = "MasterView";
             this.Load += new System.EventHandler(this.MasterView_Load);
