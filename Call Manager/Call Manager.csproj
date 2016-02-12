@@ -36,7 +36,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Llxnl5u.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Llxnl5u.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,36 +58,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CallManagerDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CallInfo.cs">
+    <Compile Include="Forms\CallInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CallInfo.Designer.cs">
+    <Compile Include="Forms\CallInfo.Designer.cs">
       <DependentUpon>CallInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Browser.cs">
+    <Compile Include="Forms\Browser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Browser.Designer.cs">
+    <Compile Include="Forms\Browser.Designer.cs">
       <DependentUpon>Browser.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewChanger.cs">
+    <Compile Include="Resources\UserSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>UserSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewChanger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewChanger.Designer.cs">
+    <Compile Include="Forms\ViewChanger.Designer.cs">
       <DependentUpon>ViewChanger.cs</DependentUpon>
     </Compile>
-    <Compile Include="OperatorView.cs">
+    <Compile Include="Forms\OperatorView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OperatorView.Designer.cs">
+    <Compile Include="Forms\OperatorView.Designer.cs">
       <DependentUpon>OperatorView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TierView.cs">
+    <Compile Include="Forms\TierView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TierView.Designer.cs">
+    <Compile Include="Forms\TierView.Designer.cs">
       <DependentUpon>TierView.cs</DependentUpon>
     </Compile>
     <Compile Include="_3CXSupportDBaseDataSet.Designer.cs">
@@ -95,16 +100,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_3CXSupportDBaseDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Browser.resx">
+    <EmbeddedResource Include="Forms\Browser.resx">
       <DependentUpon>Browser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CallInfo.resx">
+    <EmbeddedResource Include="Forms\CallInfo.resx">
       <DependentUpon>CallInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewChanger.resx">
+    <EmbeddedResource Include="Forms\ViewChanger.resx">
       <DependentUpon>ViewChanger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OperatorView.resx">
+    <EmbeddedResource Include="Forms\OperatorView.resx">
       <DependentUpon>OperatorView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -116,7 +121,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TierView.resx">
+    <EmbeddedResource Include="Forms\TierView.resx">
       <DependentUpon>TierView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CallManagerDataSet.xsc">
@@ -139,6 +144,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\UserSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>UserSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="_3CXSupportDBaseDataSet.xsc">
       <DependentUpon>_3CXSupportDBaseDataSet.xsd</DependentUpon>
     </None>
@@ -155,8 +164,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Llxnl5u.ico" />
+    <Content Include="Resources\Llxnl5u.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

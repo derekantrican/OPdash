@@ -54,7 +54,7 @@ namespace Call_Manager
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Clock.Text = DateTime.Now.ToString("%h:mm:ss tt", CultureInfo.InvariantCulture);
+            Clock.Text = DateTime.Now.ToString("%h:mm tt", CultureInfo.InvariantCulture);
 
             try
             {
@@ -84,6 +84,11 @@ namespace Call_Manager
         }
 
         private void callManagerDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxSettings_Click(object sender, EventArgs e)
         {
 
         }

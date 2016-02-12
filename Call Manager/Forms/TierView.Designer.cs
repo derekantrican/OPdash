@@ -34,13 +34,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.labelUser = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureboxSettings = new System.Windows.Forms.PictureBox();
             this.callsTableAdapter = new Call_Manager._3CXSupportDBaseDataSetTableAdapters.CallsTableAdapter();
             this.callsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._3CXSupportDBaseDataSet = new Call_Manager._3CXSupportDBaseDataSet();
             this.Clock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet)).BeginInit();
             this.SuspendLayout();
@@ -77,14 +77,15 @@
             this.labelUser.Text = "Welcome back, !";
             this.labelUser.Click += new System.EventHandler(this.labelUser_Click);
             // 
-            // pictureBox6
+            // pictureboxSettings
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1149, 1);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox6.TabIndex = 23;
-            this.pictureBox6.TabStop = false;
+            this.pictureboxSettings.Image = ((System.Drawing.Image)(resources.GetObject("pictureboxSettings.Image")));
+            this.pictureboxSettings.Location = new System.Drawing.Point(1151, 1);
+            this.pictureboxSettings.Name = "pictureboxSettings";
+            this.pictureboxSettings.Size = new System.Drawing.Size(23, 22);
+            this.pictureboxSettings.TabIndex = 23;
+            this.pictureboxSettings.TabStop = false;
+            this.pictureboxSettings.Click += new System.EventHandler(this.pictureBoxSettings_Click);
             // 
             // callsTableAdapter
             // 
@@ -104,11 +105,11 @@
             // 
             this.Clock.AutoSize = true;
             this.Clock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Clock.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock.ForeColor = System.Drawing.Color.White;
             this.Clock.Location = new System.Drawing.Point(962, 1);
             this.Clock.Name = "Clock";
-            this.Clock.Size = new System.Drawing.Size(173, 40);
+            this.Clock.Size = new System.Drawing.Size(164, 39);
             this.Clock.TabIndex = 5;
             this.Clock.Text = "12:34 PM";
             // 
@@ -118,7 +119,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1175, 521);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureboxSettings);
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.pictureBox1);
@@ -126,7 +127,7 @@
             this.Text = "Tier View";
             this.Load += new System.EventHandler(this.TierView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureboxSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -140,7 +141,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureboxSettings;
         private _3CXSupportDBaseDataSetTableAdapters.CallsTableAdapter callsTableAdapter;
         private System.Windows.Forms.BindingSource callsBindingSource;
         private _3CXSupportDBaseDataSet _3CXSupportDBaseDataSet;
