@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Call_Manager {
+namespace Call_Manager.Resources {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
