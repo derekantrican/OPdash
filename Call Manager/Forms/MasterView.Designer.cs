@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.labelOperatorTab = new System.Windows.Forms.Label();
             this.labelTierTab = new System.Windows.Forms.Label();
-            this.pictureBoxSettings = new System.Windows.Forms.PictureBox();
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSettings = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,15 +65,6 @@
             this.labelTierTab.Text = "Tier";
             this.labelTierTab.Click += new System.EventHandler(this.labelTierTab_Click);
             // 
-            // pictureBoxSettings
-            // 
-            this.pictureBoxSettings.Image = global::Call_Manager.Properties.Resources.gearWhite;
-            this.pictureBoxSettings.Location = new System.Drawing.Point(1055, 0);
-            this.pictureBoxSettings.Name = "pictureBoxSettings";
-            this.pictureBoxSettings.Size = new System.Drawing.Size(25, 25);
-            this.pictureBoxSettings.TabIndex = 4;
-            this.pictureBoxSettings.TabStop = false;
-            // 
             // Clock
             // 
             this.Clock.AutoSize = true;
@@ -89,12 +82,33 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.Image = global::Call_Manager.Properties.Resources.SigmaTEKWest__black__fw;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(989, 574);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(92, 56);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 7;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // pictureBoxSettings
+            // 
+            this.pictureBoxSettings.Image = global::Call_Manager.Properties.Resources.gearWhite;
+            this.pictureBoxSettings.Location = new System.Drawing.Point(1055, 0);
+            this.pictureBoxSettings.Name = "pictureBoxSettings";
+            this.pictureBoxSettings.Size = new System.Drawing.Size(25, 25);
+            this.pictureBoxSettings.TabIndex = 4;
+            this.pictureBoxSettings.TabStop = false;
+            // 
             // MasterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1084, 632);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.pictureBoxSettings);
             this.Controls.Add(this.labelTierTab);
@@ -106,6 +120,7 @@
             this.Name = "MasterView";
             this.Text = "MasterView";
             this.Load += new System.EventHandler(this.MasterView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,5 +133,6 @@
         private System.Windows.Forms.PictureBox pictureBoxSettings;
         private System.Windows.Forms.Label Clock;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

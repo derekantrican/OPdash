@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gearWhite.png" />
+    <None Include="Resources\SigmaTEKWest %28black%29.fw.png" />
     <Content Include="Resources\SigmaWEST logo.ico" />
     <None Include="Resources\Switch.png" />
   </ItemGroup>
