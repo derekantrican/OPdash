@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
@@ -19,6 +20,23 @@ namespace Call_Manager
             InitializeComponent();
 
             this.FormClosing += MasterView_FormClosing;
+
+            SqlConnection conn = new SqlConnection("Data Source = MICHAELF-3800\\SIGMANEST; Initial Catalog = 3CXSupportDBase; Persist Security Info = True; User ID = AE; Password = ne$t123");
+
+            using (SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) from Engineers where AE like @username", conn))
+            {
+                conn.Open();
+                sqlCommand.Parameters.AddWithValue("@username", Environment.UserName);
+                int userCount = (int)sqlCommand.ExecuteScalar();
+
+                if (userCount < 1)
+                {
+                    MessageBox.Show("\"" + Environment.UserName + "\" is not in the system. Please talk to Mike Fink");
+                    labelOperatorTab.Enabled = false;
+                    labelTierTab.Enabled = false;
+                }
+            }
+            conn.Close();
         }
 
         private void MasterView_FormClosing(object sender, FormClosingEventArgs e)
@@ -33,6 +51,8 @@ namespace Call_Manager
 
         private void labelOperatorTab_Click(object sender, EventArgs e)
         {
+            labelSelectViewPrompt.Visible = false;
+
             if (this.ActiveMdiChild != null && this.ActiveMdiChild.Text.ToString() == "Tier View")
             {
                 this.ActiveMdiChild.Close();
@@ -48,6 +68,8 @@ namespace Call_Manager
 
         private void labelTierTab_Click(object sender, EventArgs e)
         {
+            labelSelectViewPrompt.Visible = false;
+
             if (this.ActiveMdiChild != null && this.ActiveMdiChild.Text.ToString() == "Operator View")
             {
                 this.ActiveMdiChild.Close();

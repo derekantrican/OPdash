@@ -35,6 +35,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBoxSettings = new System.Windows.Forms.PictureBox();
+            this.labelSelectViewPrompt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSettings)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +103,17 @@
             this.pictureBoxSettings.TabIndex = 4;
             this.pictureBoxSettings.TabStop = false;
             // 
+            // labelSelectViewPrompt
+            // 
+            this.labelSelectViewPrompt.AutoSize = true;
+            this.labelSelectViewPrompt.BackColor = System.Drawing.Color.Transparent;
+            this.labelSelectViewPrompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectViewPrompt.Location = new System.Drawing.Point(256, 264);
+            this.labelSelectViewPrompt.Name = "labelSelectViewPrompt";
+            this.labelSelectViewPrompt.Size = new System.Drawing.Size(542, 31);
+            this.labelSelectViewPrompt.TabIndex = 8;
+            this.labelSelectViewPrompt.Text = "Please select a view from the options above";
+            // 
             // MasterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +125,7 @@
             this.Controls.Add(this.pictureBoxSettings);
             this.Controls.Add(this.labelTierTab);
             this.Controls.Add(this.labelOperatorTab);
+            this.Controls.Add(this.labelSelectViewPrompt);
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1100, 671);
@@ -134,5 +147,6 @@
         private System.Windows.Forms.Label Clock;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label labelSelectViewPrompt;
     }
 }
