@@ -33,6 +33,8 @@ namespace Call_Manager
                 if (userCount < 1)
                 {
                     MessageBox.Show("\"" + Environment.UserName + "\" is not in the system. Please talk to Mike Fink");
+                    buttonOperator.Enabled = false;
+                    buttonTier.Enabled = false;
                 }
             }
             conn.Close();
