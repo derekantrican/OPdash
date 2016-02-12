@@ -46,11 +46,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.buttonHelpdesk = new System.Windows.Forms.Button();
             this.checkBoxBuiltInBrowser = new System.Windows.Forms.CheckBox();
+            this.checkBoxPersistent = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(197, 226);
+            this.buttonSend.Location = new System.Drawing.Point(197, 214);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(75, 23);
             this.buttonSend.TabIndex = 9;
@@ -61,7 +62,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(12, 32);
+            this.labelName.Location = new System.Drawing.Point(12, 20);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(85, 13);
             this.labelName.TabIndex = 1;
@@ -69,14 +70,14 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(103, 30);
+            this.textBoxName.Location = new System.Drawing.Point(103, 18);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(154, 20);
             this.textBoxName.TabIndex = 2;
             // 
             // textBoxCompany
             // 
-            this.textBoxCompany.Location = new System.Drawing.Point(103, 56);
+            this.textBoxCompany.Location = new System.Drawing.Point(103, 44);
             this.textBoxCompany.Name = "textBoxCompany";
             this.textBoxCompany.Size = new System.Drawing.Size(154, 20);
             this.textBoxCompany.TabIndex = 4;
@@ -84,7 +85,7 @@
             // labelCompany
             // 
             this.labelCompany.AutoSize = true;
-            this.labelCompany.Location = new System.Drawing.Point(13, 58);
+            this.labelCompany.Location = new System.Drawing.Point(13, 46);
             this.labelCompany.Name = "labelCompany";
             this.labelCompany.Size = new System.Drawing.Size(54, 13);
             this.labelCompany.TabIndex = 3;
@@ -93,7 +94,7 @@
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(12, 180);
+            this.labelDescription.Location = new System.Drawing.Point(12, 168);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(82, 26);
             this.labelDescription.TabIndex = 7;
@@ -101,7 +102,7 @@
             // 
             // textBoxAreacode
             // 
-            this.textBoxAreacode.Location = new System.Drawing.Point(103, 82);
+            this.textBoxAreacode.Location = new System.Drawing.Point(103, 70);
             this.textBoxAreacode.MaxLength = 3;
             this.textBoxAreacode.Name = "textBoxAreacode";
             this.textBoxAreacode.Size = new System.Drawing.Size(35, 20);
@@ -110,7 +111,7 @@
             // labelAreacode
             // 
             this.labelAreacode.AutoSize = true;
-            this.labelAreacode.Location = new System.Drawing.Point(12, 84);
+            this.labelAreacode.Location = new System.Drawing.Point(12, 72);
             this.labelAreacode.Name = "labelAreacode";
             this.labelAreacode.Size = new System.Drawing.Size(59, 13);
             this.labelAreacode.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(103, 180);
+            this.textBoxDescription.Location = new System.Drawing.Point(103, 168);
             this.textBoxDescription.MaxLength = 140;
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
@@ -128,7 +129,7 @@
             // textBoxSIMNo
             // 
             this.textBoxSIMNo.AcceptsTab = true;
-            this.textBoxSIMNo.Location = new System.Drawing.Point(104, 109);
+            this.textBoxSIMNo.Location = new System.Drawing.Point(104, 97);
             this.textBoxSIMNo.MaxLength = 5;
             this.textBoxSIMNo.Name = "textBoxSIMNo";
             this.textBoxSIMNo.Size = new System.Drawing.Size(55, 20);
@@ -137,7 +138,7 @@
             // labelSIMNo
             // 
             this.labelSIMNo.AutoSize = true;
-            this.labelSIMNo.Location = new System.Drawing.Point(13, 111);
+            this.labelSIMNo.Location = new System.Drawing.Point(13, 99);
             this.labelSIMNo.Name = "labelSIMNo";
             this.labelSIMNo.Size = new System.Drawing.Size(39, 13);
             this.labelSIMNo.TabIndex = 9;
@@ -146,7 +147,7 @@
             // textBoxTicket
             // 
             this.textBoxTicket.AcceptsTab = true;
-            this.textBoxTicket.Location = new System.Drawing.Point(103, 138);
+            this.textBoxTicket.Location = new System.Drawing.Point(103, 126);
             this.textBoxTicket.MaxLength = 6;
             this.textBoxTicket.Name = "textBoxTicket";
             this.textBoxTicket.Size = new System.Drawing.Size(56, 20);
@@ -155,7 +156,7 @@
             // labelTicket
             // 
             this.labelTicket.AutoSize = true;
-            this.labelTicket.Location = new System.Drawing.Point(12, 140);
+            this.labelTicket.Location = new System.Drawing.Point(12, 128);
             this.labelTicket.Name = "labelTicket";
             this.labelTicket.Size = new System.Drawing.Size(79, 13);
             this.labelTicket.TabIndex = 11;
@@ -165,7 +166,7 @@
             // 
             this.labelSuccess.AutoSize = true;
             this.labelSuccess.ForeColor = System.Drawing.Color.Red;
-            this.labelSuccess.Location = new System.Drawing.Point(100, 231);
+            this.labelSuccess.Location = new System.Drawing.Point(100, 219);
             this.labelSuccess.Name = "labelSuccess";
             this.labelSuccess.Size = new System.Drawing.Size(37, 13);
             this.labelSuccess.TabIndex = 13;
@@ -179,7 +180,7 @@
             // 
             // buttonHelpdesk
             // 
-            this.buttonHelpdesk.Location = new System.Drawing.Point(179, 136);
+            this.buttonHelpdesk.Location = new System.Drawing.Point(179, 124);
             this.buttonHelpdesk.Name = "buttonHelpdesk";
             this.buttonHelpdesk.Size = new System.Drawing.Size(93, 23);
             this.buttonHelpdesk.TabIndex = 14;
@@ -190,7 +191,7 @@
             // checkBoxBuiltInBrowser
             // 
             this.checkBoxBuiltInBrowser.AutoSize = true;
-            this.checkBoxBuiltInBrowser.Location = new System.Drawing.Point(179, 157);
+            this.checkBoxBuiltInBrowser.Location = new System.Drawing.Point(179, 145);
             this.checkBoxBuiltInBrowser.Name = "checkBoxBuiltInBrowser";
             this.checkBoxBuiltInBrowser.Size = new System.Drawing.Size(99, 17);
             this.checkBoxBuiltInBrowser.TabIndex = 15;
@@ -198,13 +199,24 @@
             this.checkBoxBuiltInBrowser.UseVisualStyleBackColor = true;
             this.checkBoxBuiltInBrowser.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // checkBoxPersistent
+            // 
+            this.checkBoxPersistent.AutoSize = true;
+            this.checkBoxPersistent.Location = new System.Drawing.Point(13, 216);
+            this.checkBoxPersistent.Name = "checkBoxPersistent";
+            this.checkBoxPersistent.Size = new System.Drawing.Size(72, 17);
+            this.checkBoxPersistent.TabIndex = 16;
+            this.checkBoxPersistent.Text = "Persistent";
+            this.checkBoxPersistent.UseVisualStyleBackColor = true;
+            // 
             // CallInfo
             // 
             this.AcceptButton = this.buttonSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 245);
+            this.Controls.Add(this.checkBoxPersistent);
             this.Controls.Add(this.checkBoxBuiltInBrowser);
             this.Controls.Add(this.buttonHelpdesk);
             this.Controls.Add(this.labelSuccess);
@@ -248,5 +260,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button buttonHelpdesk;
         private System.Windows.Forms.CheckBox checkBoxBuiltInBrowser;
+        private System.Windows.Forms.CheckBox checkBoxPersistent;
     }
 }
