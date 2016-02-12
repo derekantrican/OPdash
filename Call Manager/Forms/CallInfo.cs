@@ -30,9 +30,11 @@ namespace Call_Manager
 
             //Send the call data to the database
 
+            DateTime localDate = DateTime.UtcNow;
+
             SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
             Connection.Open();
-            SqlCommand sc = new SqlCommand("insert into dbo.Calls values('" + CallGuid + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
+            SqlCommand sc = new SqlCommand("insert into dbo.Call values('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
 
             try
             {

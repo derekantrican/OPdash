@@ -90,12 +90,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>UserSettings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ViewChanger.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ViewChanger.Designer.cs">
-      <DependentUpon>ViewChanger.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\OperatorView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_3CXSupportDBaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_3CXSupportDBaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Browser.resx">
       <DependentUpon>Browser.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterView.resx">
       <DependentUpon>MasterView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewChanger.resx">
-      <DependentUpon>ViewChanger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OperatorView.resx">
       <DependentUpon>OperatorView.cs</DependentUpon>
@@ -173,6 +169,17 @@
     </None>
     <None Include="_3CXSupportDBaseDataSet.xss">
       <DependentUpon>_3CXSupportDBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_3CXSupportDBaseDataSet1.xsc">
+      <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_3CXSupportDBaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_3CXSupportDBaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_3CXSupportDBaseDataSet1.xss">
+      <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
