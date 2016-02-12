@@ -30,9 +30,11 @@ namespace Call_Manager
 
             //Send the call data to the database
 
+            DateTime localDate = DateTime.UtcNow;
+
             SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
             Connection.Open();
-            SqlCommand sc = new SqlCommand("insert into dbo.Calls values('" + CallGuid + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
+            SqlCommand sc = new SqlCommand("insert into dbo.Call values('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
 
             try
             {
@@ -40,16 +42,30 @@ namespace Call_Manager
                 SendStatus = "Sent Successfully!";
 
                 System.Threading.Thread.Sleep(3000);
-                this.Close();
             }
 
-            catch(SqlException exp)
+            catch (SqlException exp)
             {
                 Debug.Write("Error: " + exp);
                 SendStatus = "Failed...";
             }
 
             Connection.Close();
+
+            if (checkBoxPersistent.Checked)
+            {
+                textBoxName.Text = "";
+                textBoxCompany.Text = "";
+                textBoxAreacode.Text = "";
+                textBoxSIMNo.Text = "";
+                textBoxTicket.Text = "";
+                textBoxDescription.Text = "";
+                textBoxName.Focus();
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -71,6 +87,11 @@ namespace Call_Manager
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CallInfo_Load(object sender, EventArgs e)
         {
 
         }

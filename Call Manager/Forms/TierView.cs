@@ -15,103 +15,82 @@ namespace Call_Manager
 {
     public partial class TierView : Form
     {
-        public static bool ChangeView;
 
         public TierView()
         {
             InitializeComponent();
-            ChangeView = false;           
-
-            toolTip1.SetToolTip(this.Clock, "Brandon wanted a \"Big Ass Clock\"");
-
-            labelUser.Text = "Welcome back, " + Environment.UserName + "!";
-
-            this.FormClosing += TierView_FormClosing;
-        }
-
-        private void TierView_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ChangeView)
-            {
-                Application.Exit();
-            }
         }
 
         private void TierView_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_3CXSupportDBaseDataSet.Calls' table. You can move, or remove it, as needed.
-            this.callsTableAdapter.Fill(this._3CXSupportDBaseDataSet.Calls);
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
-            ChangeView = true;
-            ViewChanger ViewWindow = new ViewChanger();
-            ViewWindow.Show();
-            this.Close();
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Clock.Text = DateTime.Now.ToString("%h:mm tt", CultureInfo.InvariantCulture);
+            DataTable table = new DataTable();
+            DataTable table1 = new DataTable();
+            SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
+            Connection.Open();
 
-            try
-            {
-                //dataGridView1.DataSource = dbManip.PopulateDataSetAsync("SELECT * FROM dbo.Calls", "dbo.Calls", "_3CXSupportDBaseDataSet").Result;
-                this.callsTableAdapter.Update(this._3CXSupportDBaseDataSet.Calls);
-                Debug.Write("Refreshed\n");
-            }
-            catch
-            {
+            SqlCommand sc = new SqlCommand("SELECT GUID AS GUID, Customer, Company, Phone, SIM, Ticket, Description, Engineer, Operator FROM dbo.Call", Connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(sc);
+            SqlCommand sc1 = new SqlCommand("SELECT GUID AS GUID, Customer, Company, Phone, SIM, Ticket, Description, Engineer, Operator FROM dbo.Call", Connection);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(sc1);
 
-            }
+            //Set up the top view table
+            adapter.Fill(table);
+            callsBindingSource.DataSource = table;
+            dataGridViewUnassigned.DataSource = callsBindingSource;
+            callsBindingSource.Filter = "Engineer = ''";
+
+            //Set up the bottom view table
+            adapter.Fill(table1);
+            bindingSource1.DataSource = table1;
+            dataGridViewMine.DataSource = bindingSource1;
+            bindingSource1.Filter = "Engineer = '" + Environment.UserName + "'";
+
+            Connection.Close();
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        private void dataGridViewUnassigned_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex < 0 || e.ColumnIndex != dataGridViewUnassigned.Columns["AE"].Index)
+                return;
+
+            string guid = dataGridViewUnassigned.Rows[e.RowIndex].Cells["gUIDDataGridViewTextBoxColumn"].Value.ToString();
+
+            Debug.Write("GUID: " + guid + "\n");
+
+            SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
+            Connection.Open();
+            SqlCommand sc = new SqlCommand("UPDATE dbo.Call SET Engineer ='" + Environment.UserName + "' WHERE GUID = '" + guid + "'", Connection);
+            int o = sc.ExecuteNonQuery();
+            Connection.Close();
         }
 
-        private void labelUser_Click(object sender, EventArgs e)
+        private void dataGridViewUnassigned_DataSourceChanged(object sender, EventArgs e)
         {
-
+            //Adding "Take" buttons
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+            buttonColumn.HeaderText = "Engineer";
+            buttonColumn.Name = "AE";
+            buttonColumn.Text = "Take";
+            buttonColumn.UseColumnTextForButtonValue = true;
+            dataGridViewUnassigned.Columns.Add(buttonColumn);
+            buttonColumn.DisplayIndex = 9;
+            //dataGridViewUnassigned.Columns[""].DisplayIndex = 6;
+            dataGridViewUnassigned.CellClick += new DataGridViewCellEventHandler(dataGridViewUnassigned_CellClick);
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void callManagerDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private DataTable PopulateDataSet(string sqlQuery, string table, string dataSet)
-        //{
-        //    string connectionString = @"Data Source = MICHAELF-3800\SIGMANEST; Initial Catalog = 3CXSupportDBase; Persist Security Info = True; User ID = AE; Password = ne$t123";
-        //    SqlConnection connString = new SqlConnection(connectionString);
-        //    connString.Open();
-
-        //    SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlQuery, connString);
-        //    DataSet dataSetInstance = new DataSet(dataSet);
-        //    dataAdapter.FillSchema(dataSetInstance, SchemaType.Source, table);
-        //    dataAdapter.Fill(dataSetInstance, table);
-
-        //    DataTable dataTable = dataSetInstance.Tables[table];
-
-        //    return dataTable;
-        //}
-
-        //public async Task PopulateDataSetAsync(string sqlQuery, string table, string dataSet)
-        //{
-        //    return await Task.Run(() => PopulateDataSet(sqlQuery, table, dataSet)).ConfigureAwait(continueOnCapturedContext: false);
-        //}
     }
 }

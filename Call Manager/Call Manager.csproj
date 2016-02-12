@@ -39,6 +39,10 @@
     <ApplicationIcon>Resources\SigmaWEST logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -70,6 +74,12 @@
     <Compile Include="Forms\Browser.Designer.cs">
       <DependentUpon>Browser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MasterView.Designer.cs">
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,12 +89,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>UserSettings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ViewChanger.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ViewChanger.Designer.cs">
-      <DependentUpon>ViewChanger.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\OperatorView.cs">
       <SubType>Form</SubType>
@@ -105,14 +109,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_3CXSupportDBaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_3CXSupportDBaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Browser.resx">
       <DependentUpon>Browser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CallInfo.resx">
       <DependentUpon>CallInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewChanger.resx">
-      <DependentUpon>ViewChanger.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MasterView.resx">
+      <DependentUpon>MasterView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OperatorView.resx">
       <DependentUpon>OperatorView.cs</DependentUpon>
@@ -136,6 +145,7 @@
     <None Include="CallManagerDataSet.xss">
       <DependentUpon>CallManagerDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,12 +170,24 @@
     <None Include="_3CXSupportDBaseDataSet.xss">
       <DependentUpon>_3CXSupportDBaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="_3CXSupportDBaseDataSet1.xsc">
+      <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_3CXSupportDBaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_3CXSupportDBaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_3CXSupportDBaseDataSet1.xss">
+      <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gearWhite.png" />
+    <None Include="Resources\SigmaTEKWest %28black%29.fw.png" />
     <Content Include="Resources\SigmaWEST logo.ico" />
     <None Include="Resources\Switch.png" />
   </ItemGroup>

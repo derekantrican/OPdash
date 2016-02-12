@@ -73,6 +73,16 @@ namespace Call_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SigmaTEKWest__black__fw {
+            get {
+                object obj = ResourceManager.GetObject("SigmaTEKWest (black).fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Switch {
             get {
                 object obj = ResourceManager.GetObject("Switch", resourceCulture);
