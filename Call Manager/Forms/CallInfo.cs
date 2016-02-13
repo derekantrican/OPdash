@@ -25,20 +25,21 @@ namespace Call_Manager
 
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            Guid CallGuid;
-            CallGuid = Guid.NewGuid();
+            Guid CallGuid = Guid.NewGuid();
+
+            Debug.Write(CallGuid);
 
             //Send the call data to the database
 
             DateTime localDate = DateTime.UtcNow;
-
+            Debug.Write("\n\n\n");
             SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
             Connection.Open();
-            SqlCommand sc = new SqlCommand("insert into dbo.Call values('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
+            SqlCommand sqlcomm = new SqlCommand("INSERT INTO dbo.Call VALUES('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
 
             try
             {
-                int o = sc.ExecuteNonQuery();
+                int o = sqlcomm.ExecuteNonQuery();
                 SendStatus = "Sent Successfully!";
 
                 System.Threading.Thread.Sleep(3000);
@@ -46,11 +47,10 @@ namespace Call_Manager
 
             catch (SqlException exp)
             {
-                Debug.Write("Error: " + exp);
+                Debug.Write("Error: " + exp + "\n");
                 SendStatus = "Failed...";
             }
 
-            Connection.Close();
 
             if (checkBoxPersistent.Checked)
             {
@@ -66,6 +66,8 @@ namespace Call_Manager
             {
                 this.Close();
             }
+
+            Connection.Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

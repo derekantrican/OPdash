@@ -31,9 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.splitTableView = new System.Windows.Forms.SplitContainer();
             this.dataGridViewUnassigned = new System.Windows.Forms.DataGridView();
-            this.callsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.callBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._3CXSupportDBaseDataSet1 = new Call_Manager._3CXSupportDBaseDataSet1();
             this.labelMyTickets = new System.Windows.Forms.Label();
             this.dataGridViewMine = new System.Windows.Forms.DataGridView();
+            this.callBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.callsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.callsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -42,11 +45,8 @@
             this.callsTableAdapter = new Call_Manager._3CXSupportDBaseDataSetTableAdapters.CallsTableAdapter();
             this._3CXSupportDBaseDataSet = new Call_Manager._3CXSupportDBaseDataSet();
             this.callsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this._3CXSupportDBaseDataSet1 = new Call_Manager._3CXSupportDBaseDataSet1();
-            this.callBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.callTableAdapter = new Call_Manager._3CXSupportDBaseDataSet1TableAdapters.CallTableAdapter();
             this.cXSupportDBaseDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.callBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gUIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.phoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,18 +72,18 @@
             this.splitTableView.Panel2.SuspendLayout();
             this.splitTableView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnassigned)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.callManagerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.callManagerDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cXSupportDBaseDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitTableView
@@ -136,6 +136,16 @@
             this.dataGridViewUnassigned.DataSourceChanged += new System.EventHandler(this.dataGridViewUnassigned_DataSourceChanged);
             this.dataGridViewUnassigned.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUnassigned_CellClick);
             // 
+            // callBindingSource
+            // 
+            this.callBindingSource.DataMember = "Call";
+            this.callBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
+            // 
+            // _3CXSupportDBaseDataSet1
+            // 
+            this._3CXSupportDBaseDataSet1.DataSetName = "_3CXSupportDBaseDataSet1";
+            this._3CXSupportDBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // labelMyTickets
             // 
             this.labelMyTickets.AutoSize = true;
@@ -172,6 +182,16 @@
             this.dataGridViewMine.Size = new System.Drawing.Size(1049, 299);
             this.dataGridViewMine.TabIndex = 0;
             // 
+            // callBindingSource1
+            // 
+            this.callBindingSource1.DataMember = "Call";
+            this.callBindingSource1.DataSource = this._3CXSupportDBaseDataSet1;
+            // 
+            // callsBindingSource
+            // 
+            this.callsBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
+            this.callsBindingSource.Position = 0;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -202,16 +222,6 @@
             this.callsBindingSource2.DataMember = "Calls";
             this.callsBindingSource2.DataSource = this._3CXSupportDBaseDataSet;
             // 
-            // _3CXSupportDBaseDataSet1
-            // 
-            this._3CXSupportDBaseDataSet1.DataSetName = "_3CXSupportDBaseDataSet1";
-            this._3CXSupportDBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // callBindingSource
-            // 
-            this.callBindingSource.DataMember = "Call";
-            this.callBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
-            // 
             // callTableAdapter
             // 
             this.callTableAdapter.ClearBeforeFill = true;
@@ -220,11 +230,6 @@
             // 
             this.cXSupportDBaseDataSet1BindingSource.DataSource = this._3CXSupportDBaseDataSet1;
             this.cXSupportDBaseDataSet1BindingSource.Position = 0;
-            // 
-            // callBindingSource1
-            // 
-            this.callBindingSource1.DataMember = "Call";
-            this.callBindingSource1.DataSource = this._3CXSupportDBaseDataSet1;
             // 
             // gUIDDataGridViewTextBoxColumn1
             // 
@@ -240,6 +245,7 @@
             this.timeDataGridViewImageColumn1.HeaderText = "Time";
             this.timeDataGridViewImageColumn1.Name = "timeDataGridViewImageColumn1";
             this.timeDataGridViewImageColumn1.ReadOnly = true;
+            this.timeDataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.timeDataGridViewImageColumn1.Visible = false;
             // 
             // phoneDataGridViewTextBoxColumn1
@@ -317,6 +323,7 @@
             this.timeDataGridViewImageColumn.HeaderText = "Time";
             this.timeDataGridViewImageColumn.Name = "timeDataGridViewImageColumn";
             this.timeDataGridViewImageColumn.ReadOnly = true;
+            this.timeDataGridViewImageColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.timeDataGridViewImageColumn.Visible = false;
             // 
             // phoneDataGridViewTextBoxColumn
@@ -399,18 +406,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitTableView)).EndInit();
             this.splitTableView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUnassigned)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.callManagerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.callManagerDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.callsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._3CXSupportDBaseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cXSupportDBaseDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.callBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,6 +440,8 @@
         private _3CXSupportDBaseDataSet1 _3CXSupportDBaseDataSet1;
         private System.Windows.Forms.BindingSource callBindingSource;
         private _3CXSupportDBaseDataSet1TableAdapters.CallTableAdapter callTableAdapter;
+        private System.Windows.Forms.BindingSource callBindingSource1;
+        private System.Windows.Forms.BindingSource cXSupportDBaseDataSet1BindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn gUIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewImageColumn timeDataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn1;
@@ -443,8 +452,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn engineerDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn operatorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource callBindingSource1;
-        private System.Windows.Forms.BindingSource cXSupportDBaseDataSet1BindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn gUIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn timeDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;

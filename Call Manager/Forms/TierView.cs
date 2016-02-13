@@ -43,9 +43,9 @@ namespace Call_Manager
             SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
             Connection.Open();
 
-            SqlCommand sc = new SqlCommand("SELECT GUID AS GUID, Customer, Company, Phone, SIM, Ticket, Description, Engineer, Operator FROM dbo.Call", Connection);
+            SqlCommand sc = new SqlCommand("SELECT GUID AS GUID, Time, Customer, Company, Phone, SIM, Ticket, Description, Engineer, Operator FROM dbo.Call", Connection);
             SqlDataAdapter adapter = new SqlDataAdapter(sc);
-            SqlCommand sc1 = new SqlCommand("SELECT GUID AS GUID, Customer, Company, Phone, SIM, Ticket, Description, Engineer, Operator FROM dbo.Call", Connection);
+            SqlCommand sc1 = new SqlCommand("SELECT GUID AS GUID, Time, Customer, Company, Phone, SIM, Ticket, Description, Engineer, Operator FROM dbo.Call", Connection);
             SqlDataAdapter adapter1 = new SqlDataAdapter(sc1);
 
             //Set up the top view table
@@ -54,11 +54,14 @@ namespace Call_Manager
             dataGridViewUnassigned.DataSource = callsBindingSource;
             callsBindingSource.Filter = "Engineer = ''";
 
+            dataGridViewUnassigned.Sort(dataGridViewUnassigned.Columns["timeDataGridViewImageColumn"], ListSortDirection.Descending);
+
             //Set up the bottom view table
             adapter.Fill(table1);
             bindingSource1.DataSource = table1;
             dataGridViewMine.DataSource = bindingSource1;
             bindingSource1.Filter = "Engineer = '" + Environment.UserName + "'";
+            dataGridViewMine.Sort(dataGridViewMine.Columns["timeDataGridViewImageColumn1"], ListSortDirection.Descending);
 
             Connection.Close();
         }
