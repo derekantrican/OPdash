@@ -35,7 +35,9 @@ namespace Call_Manager
             Debug.Write("\n\n\n");
             SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
             Connection.Open();
-            SqlCommand sqlcomm = new SqlCommand("INSERT INTO dbo.Call VALUES('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');", Connection);
+
+            string sqlCommandString = "INSERT INTO dbo.Call VALUES('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');";
+            SqlCommand sqlcomm = new SqlCommand(sqlCommandString, Connection);
 
             try
             {
@@ -43,28 +45,27 @@ namespace Call_Manager
                 SendStatus = "Sent Successfully!";
 
                 System.Threading.Thread.Sleep(3000);
+
+                if (checkBoxPersistent.Checked)
+                {
+                    textBoxName.Text = "";
+                    textBoxCompany.Text = "";
+                    textBoxAreacode.Text = "";
+                    textBoxSIMNo.Text = "";
+                    textBoxTicket.Text = "";
+                    textBoxDescription.Text = "";
+                    textBoxName.Focus();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
 
             catch (SqlException exp)
             {
                 Debug.Write("Error: " + exp + "\n");
                 SendStatus = "Failed...";
-            }
-
-
-            if (checkBoxPersistent.Checked)
-            {
-                textBoxName.Text = "";
-                textBoxCompany.Text = "";
-                textBoxAreacode.Text = "";
-                textBoxSIMNo.Text = "";
-                textBoxTicket.Text = "";
-                textBoxDescription.Text = "";
-                textBoxName.Focus();
-            }
-            else
-            {
-                this.Close();
             }
 
             Connection.Close();
