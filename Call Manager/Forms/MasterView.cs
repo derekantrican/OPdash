@@ -75,6 +75,8 @@ namespace Call_Manager
 
             labelOperatorTab.BackColor = System.Drawing.Color.LightSteelBlue;
             labelTierTab.BackColor = System.Drawing.Color.Yellow;
+            labelOperatorTab.Enabled = false;
+            labelTierTab.Enabled = true;
         }
 
         private void labelTierTab_Click(object sender, EventArgs e)
@@ -95,6 +97,8 @@ namespace Call_Manager
 
             labelTierTab.BackColor = System.Drawing.Color.PaleGoldenrod;
             labelOperatorTab.BackColor = System.Drawing.Color.Blue;
+            labelTierTab.Enabled = false;
+            labelOperatorTab.Enabled = true;
         }
 
         private void MasterView_Load(object sender, EventArgs e)
