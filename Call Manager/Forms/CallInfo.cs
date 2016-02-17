@@ -14,7 +14,6 @@ namespace Call_Manager
 {
     public partial class CallInfo : Form
     {
-        public string SendStatus{ get; set; }
 
         public CallInfo()
         {
@@ -33,16 +32,36 @@ namespace Call_Manager
 
             DateTime localDate = DateTime.UtcNow;
             Debug.Write("\n\n\n");
-            SqlConnection Connection = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
-            Connection.Open();
+            SqlConnection Conn = new SqlConnection("Data Source=MICHAELF-3800\\SIGMANEST;Initial Catalog=3CXSupportDBase;Persist Security Info=True;User ID=AE;Password=ne$t123");
+            Conn.Open();
+            Debug.Write(localDate.GetType());
+            SqlCommand sqlcomm = new SqlCommand("INSERT INTO dbo.Call VALUES( @Guid, cast(@Time as datetime), @Name, @Comp, @AreaCode, @SIMNo, @Ticket, @Desc,'', @Operator);", Conn);
 
-            string sqlCommandString = "INSERT INTO dbo.Call VALUES('" + CallGuid + "','" + localDate.ToString("yyyy-MM-ddThh:mm:ss") + "','" + textBoxName.Text + "','" + textBoxCompany.Text + "','" + textBoxAreacode.Text + "','" + textBoxSIMNo.Text + "','" + textBoxTicket.Text + "','" + textBoxDescription.Text + "','','" + Environment.UserName + "');";
-            SqlCommand sqlcomm = new SqlCommand(sqlCommandString, Connection);
+            //Add the parameter types
+            sqlcomm.Parameters.Add("@Guid", SqlDbType.UniqueIdentifier);
+            sqlcomm.Parameters.AddWithValue("@Time", localDate);
+            sqlcomm.Parameters.Add("@Name", SqlDbType.NVarChar);
+            sqlcomm.Parameters.Add("@Comp", SqlDbType.NVarChar);
+            sqlcomm.Parameters.Add("@AreaCode", SqlDbType.Int);
+            sqlcomm.Parameters.Add("@SIMNo", SqlDbType.Int);
+            sqlcomm.Parameters.Add("@Ticket", SqlDbType.Int);
+            sqlcomm.Parameters.Add("@Desc", SqlDbType.NVarChar);
+            sqlcomm.Parameters.Add("@Operator", SqlDbType.NVarChar);
+
+            //Define the values for the parameters
+            sqlcomm.Parameters["@Guid"].Value = CallGuid;
+            sqlcomm.Parameters["@Name"].Value = textBoxName.Text;
+            sqlcomm.Parameters["@Comp"].Value = textBoxCompany.Text;
+            sqlcomm.Parameters["@AreaCode"].Value = textBoxAreacode.Text;
+            sqlcomm.Parameters["@SIMNo"].Value = textBoxSIMNo.Text;
+            sqlcomm.Parameters["@Ticket"].Value = textBoxTicket.Text;
+            sqlcomm.Parameters["@Desc"].Value = textBoxDescription.Text;
+            sqlcomm.Parameters["@Operator"].Value = Environment.UserName;
 
             try
             {
-                int o = sqlcomm.ExecuteNonQuery();
-                SendStatus = "Sent Successfully!";
+                Int32 o = sqlcomm.ExecuteNonQuery();
+                this.labelSuccess.Text = "Sent Successfully!";
 
                 System.Threading.Thread.Sleep(3000);
 
@@ -65,15 +84,10 @@ namespace Call_Manager
             catch (SqlException exp)
             {
                 Debug.Write("Error: " + exp + "\n");
-                SendStatus = "Failed...";
+                this.labelSuccess.Text = "Failed...";
             }
 
-            Connection.Close();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            labelSuccess.Text = SendStatus;
+            Conn.Close();
         }
 
         private void buttonHelpdesk_Click(object sender, EventArgs e)

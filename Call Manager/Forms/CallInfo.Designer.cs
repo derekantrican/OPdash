@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.buttonSend = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -43,7 +42,6 @@
             this.textBoxTicket = new System.Windows.Forms.TextBox();
             this.labelTicket = new System.Windows.Forms.Label();
             this.labelSuccess = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.buttonHelpdesk = new System.Windows.Forms.Button();
             this.checkBoxBuiltInBrowser = new System.Windows.Forms.CheckBox();
             this.checkBoxPersistent = new System.Windows.Forms.CheckBox();
@@ -172,12 +170,6 @@
             this.labelSuccess.TabIndex = 13;
             this.labelSuccess.Text = "Status";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 250;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // buttonHelpdesk
             // 
             this.buttonHelpdesk.Location = new System.Drawing.Point(179, 124);
@@ -257,7 +249,6 @@
         private System.Windows.Forms.TextBox textBoxTicket;
         private System.Windows.Forms.Label labelTicket;
         private System.Windows.Forms.Label labelSuccess;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button buttonHelpdesk;
         private System.Windows.Forms.CheckBox checkBoxBuiltInBrowser;
         private System.Windows.Forms.CheckBox checkBoxPersistent;
