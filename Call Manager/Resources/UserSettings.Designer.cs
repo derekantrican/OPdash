@@ -22,5 +22,29 @@ namespace Call_Manager.Resources {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MICHAELF-3800")]
+        public string Server {
+            get {
+                return ((string)(this["Server"]));
+            }
+            set {
+                this["Server"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SIGMANEST")]
+        public string Instance {
+            get {
+                return ((string)(this["Instance"]));
+            }
+            set {
+                this["Instance"] = value;
+            }
+        }
     }
 }

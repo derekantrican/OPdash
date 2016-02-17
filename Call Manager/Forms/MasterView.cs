@@ -21,7 +21,12 @@ namespace Call_Manager
             
             this.FormClosing += MasterView_FormClosing;
 
-            SqlConnection conn = new SqlConnection("Data Source = MICHAELF-3800\\SIGMANEST; Initial Catalog = 3CXSupportDBase; Persist Security Info = True; User ID = AE; Password = ne$t123");
+            string sqlServer = Resources.UserSettings.Default.Server;
+            string sqlInstance = Resources.UserSettings.Default.Instance;
+
+            string dataconnection = ("Data Source = " + sqlServer + "\\" + sqlInstance + "; Initial Catalog = 3CXSupportDBase; Persist Security Info = True; User ID = AE; Password = ne$t123");
+
+            SqlConnection conn = new SqlConnection(dataconnection);
 
             using (SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) from Engineers where AE like @username", conn))
             {
@@ -95,6 +100,12 @@ namespace Call_Manager
         private void MasterView_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBoxSettings_Click(object sender, EventArgs e)
+        {
+            Forms.Config config = new Forms.Config();
+            config.Show();
         }
     }
 }

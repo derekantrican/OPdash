@@ -44,11 +44,11 @@
             // 
             this.labelOperatorTab.AutoSize = true;
             this.labelOperatorTab.BackColor = System.Drawing.Color.Blue;
-            this.labelOperatorTab.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOperatorTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOperatorTab.ForeColor = System.Drawing.Color.White;
             this.labelOperatorTab.Location = new System.Drawing.Point(12, 1);
             this.labelOperatorTab.Name = "labelOperatorTab";
-            this.labelOperatorTab.Size = new System.Drawing.Size(135, 32);
+            this.labelOperatorTab.Size = new System.Drawing.Size(121, 31);
             this.labelOperatorTab.TabIndex = 2;
             this.labelOperatorTab.Text = "Operator";
             this.labelOperatorTab.Click += new System.EventHandler(this.labelOperatorTab_Click);
@@ -57,11 +57,11 @@
             // 
             this.labelTierTab.AutoSize = true;
             this.labelTierTab.BackColor = System.Drawing.Color.Yellow;
-            this.labelTierTab.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTierTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTierTab.ForeColor = System.Drawing.Color.Black;
             this.labelTierTab.Location = new System.Drawing.Point(164, 1);
             this.labelTierTab.Name = "labelTierTab";
-            this.labelTierTab.Size = new System.Drawing.Size(67, 32);
+            this.labelTierTab.Size = new System.Drawing.Size(61, 31);
             this.labelTierTab.TabIndex = 3;
             this.labelTierTab.Text = "Tier";
             this.labelTierTab.Click += new System.EventHandler(this.labelTierTab_Click);
@@ -102,6 +102,7 @@
             this.pictureBoxSettings.Size = new System.Drawing.Size(25, 25);
             this.pictureBoxSettings.TabIndex = 4;
             this.pictureBoxSettings.TabStop = false;
+            this.pictureBoxSettings.Click += new System.EventHandler(this.pictureBoxSettings_Click);
             // 
             // labelSelectViewPrompt
             // 

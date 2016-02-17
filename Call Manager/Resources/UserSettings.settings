@@ -1,6 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Call_Manager.Resources" GeneratedClassName="UserSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MICHAELF-3800</Value>
+    </Setting>
+    <Setting Name="Instance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SIGMANEST</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
