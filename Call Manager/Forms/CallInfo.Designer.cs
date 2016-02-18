@@ -45,6 +45,10 @@
             this.buttonHelpdesk = new System.Windows.Forms.Button();
             this.checkBoxBuiltInBrowser = new System.Windows.Forms.CheckBox();
             this.checkBoxPersistent = new System.Windows.Forms.CheckBox();
+            this.NameRequired = new System.Windows.Forms.Label();
+            this.CompanyRequired = new System.Windows.Forms.Label();
+            this.AreaCodeRequired = new System.Windows.Forms.Label();
+            this.DescriptionRequired = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonSend
@@ -201,6 +205,46 @@
             this.checkBoxPersistent.Text = "Persistent";
             this.checkBoxPersistent.UseVisualStyleBackColor = true;
             // 
+            // NameRequired
+            // 
+            this.NameRequired.AutoSize = true;
+            this.NameRequired.ForeColor = System.Drawing.Color.Red;
+            this.NameRequired.Location = new System.Drawing.Point(258, 21);
+            this.NameRequired.Name = "NameRequired";
+            this.NameRequired.Size = new System.Drawing.Size(11, 13);
+            this.NameRequired.TabIndex = 17;
+            this.NameRequired.Text = "*";
+            // 
+            // CompanyRequired
+            // 
+            this.CompanyRequired.AutoSize = true;
+            this.CompanyRequired.ForeColor = System.Drawing.Color.Red;
+            this.CompanyRequired.Location = new System.Drawing.Point(258, 47);
+            this.CompanyRequired.Name = "CompanyRequired";
+            this.CompanyRequired.Size = new System.Drawing.Size(11, 13);
+            this.CompanyRequired.TabIndex = 18;
+            this.CompanyRequired.Text = "*";
+            // 
+            // AreaCodeRequired
+            // 
+            this.AreaCodeRequired.AutoSize = true;
+            this.AreaCodeRequired.ForeColor = System.Drawing.Color.Red;
+            this.AreaCodeRequired.Location = new System.Drawing.Point(140, 75);
+            this.AreaCodeRequired.Name = "AreaCodeRequired";
+            this.AreaCodeRequired.Size = new System.Drawing.Size(11, 13);
+            this.AreaCodeRequired.TabIndex = 19;
+            this.AreaCodeRequired.Text = "*";
+            // 
+            // DescriptionRequired
+            // 
+            this.DescriptionRequired.AutoSize = true;
+            this.DescriptionRequired.ForeColor = System.Drawing.Color.Red;
+            this.DescriptionRequired.Location = new System.Drawing.Point(258, 171);
+            this.DescriptionRequired.Name = "DescriptionRequired";
+            this.DescriptionRequired.Size = new System.Drawing.Size(11, 13);
+            this.DescriptionRequired.TabIndex = 20;
+            this.DescriptionRequired.Text = "*";
+            // 
             // CallInfo
             // 
             this.AcceptButton = this.buttonSend;
@@ -208,6 +252,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(284, 245);
+            this.Controls.Add(this.DescriptionRequired);
+            this.Controls.Add(this.AreaCodeRequired);
+            this.Controls.Add(this.CompanyRequired);
+            this.Controls.Add(this.NameRequired);
             this.Controls.Add(this.checkBoxPersistent);
             this.Controls.Add(this.checkBoxBuiltInBrowser);
             this.Controls.Add(this.buttonHelpdesk);
@@ -252,5 +300,9 @@
         private System.Windows.Forms.Button buttonHelpdesk;
         private System.Windows.Forms.CheckBox checkBoxBuiltInBrowser;
         private System.Windows.Forms.CheckBox checkBoxPersistent;
+        private System.Windows.Forms.Label NameRequired;
+        private System.Windows.Forms.Label CompanyRequired;
+        private System.Windows.Forms.Label AreaCodeRequired;
+        private System.Windows.Forms.Label DescriptionRequired;
     }
 }
