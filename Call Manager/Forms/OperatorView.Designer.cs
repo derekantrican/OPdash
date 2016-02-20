@@ -42,6 +42,8 @@
             this.pictureBoxOperatorNext = new System.Windows.Forms.PictureBox();
             this.pictureBoxTier2Next = new System.Windows.Forms.PictureBox();
             this.labelNewCall = new System.Windows.Forms.Label();
+            this.webBrowserOperator = new System.Windows.Forms.WebBrowser();
+            this.webBrowserTier = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.newTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -200,6 +202,32 @@
             this.labelNewCall.Text = "New\r\nCall\r\n";
             this.labelNewCall.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // webBrowserOperator
+            // 
+            this.webBrowserOperator.Location = new System.Drawing.Point(17, 148);
+            this.webBrowserOperator.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserOperator.Name = "webBrowserOperator";
+            this.webBrowserOperator.ScriptErrorsSuppressed = true;
+            this.webBrowserOperator.ScrollBarsEnabled = false;
+            this.webBrowserOperator.Size = new System.Drawing.Size(310, 118);
+            this.webBrowserOperator.TabIndex = 21;
+            this.webBrowserOperator.Url = new System.Uri("https://script.google.com/macros/s/AKfycby2TVTF693Dtlhww2ElUWmp1jL3DXCYBQPdWjf33H" +
+        "GRNWD7uF0/exec", System.UriKind.Absolute);
+            this.webBrowserOperator.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowserOperator_DocumentCompleted);
+            // 
+            // webBrowserTier
+            // 
+            this.webBrowserTier.Location = new System.Drawing.Point(346, 148);
+            this.webBrowserTier.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserTier.Name = "webBrowserTier";
+            this.webBrowserTier.ScriptErrorsSuppressed = true;
+            this.webBrowserTier.ScrollBarsEnabled = false;
+            this.webBrowserTier.Size = new System.Drawing.Size(308, 118);
+            this.webBrowserTier.TabIndex = 22;
+            this.webBrowserTier.Url = new System.Uri("https://script.google.com/macros/s/AKfycbxns1C92ffmLPGB8jlaDgUKx0BWNLYg2t2WWkaRQt" +
+        "_sz2so-ys/exec", System.UriKind.Absolute);
+            this.webBrowserTier.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowserTier_DocumentCompleted);
+            // 
             // OperatorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +235,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(672, 290);
             this.ControlBox = false;
+            this.Controls.Add(this.webBrowserTier);
+            this.Controls.Add(this.webBrowserOperator);
             this.Controls.Add(this.labelNewCall);
             this.Controls.Add(this.pictureBoxTier2Next);
             this.Controls.Add(this.pictureBoxOperatorNext);
@@ -253,5 +283,7 @@
         private System.Windows.Forms.PictureBox pictureBoxOperatorNext;
         private System.Windows.Forms.PictureBox pictureBoxTier2Next;
         private System.Windows.Forms.Label labelNewCall;
+        private System.Windows.Forms.WebBrowser webBrowserOperator;
+        private System.Windows.Forms.WebBrowser webBrowserTier;
     }
 }

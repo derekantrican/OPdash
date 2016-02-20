@@ -6,7 +6,9 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,6 +30,18 @@ namespace Call_Manager
         {
             CallInfo CallInfoWindow = new CallInfo();
             CallInfoWindow.Show();
+        }
+
+        private void webBrowserOperator_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            Thread.CurrentThread.SetApartmentState(ApartmentState.STA);
+            webBrowserOperator.Document.Window.ScrollTo(0, 45);
+        }
+
+        private void webBrowserTier_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            Thread.CurrentThread.SetApartmentState(ApartmentState.STA);
+            webBrowserTier.Document.Window.ScrollTo(0, 45);
         }
     }
 }

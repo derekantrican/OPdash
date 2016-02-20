@@ -145,5 +145,19 @@ namespace Call_Manager
         {
 
         }
+
+        private void CannedResponses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Debug.Write("Selected: " + CannedResponses.SelectedItem + "\n");
+
+            if (CannedResponses.SelectedItem.ToString() == "SIM not found")
+            {
+                textBoxDescription.Text = "SIM not found";
+            }
+            else if (CannedResponses.SelectedItem.ToString() == "Database connection")
+            {
+                textBoxDescription.Text = "Trouble connecting to the database";
+            }
+        }
     }
 }

@@ -49,6 +49,7 @@
             this.CompanyRequired = new System.Windows.Forms.Label();
             this.AreaCodeRequired = new System.Windows.Forms.Label();
             this.DescriptionRequired = new System.Windows.Forms.Label();
+            this.CannedResponses = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonSend
@@ -245,6 +246,20 @@
             this.DescriptionRequired.TabIndex = 20;
             this.DescriptionRequired.Text = "*";
             // 
+            // CannedResponses
+            // 
+            this.CannedResponses.DropDownWidth = 150;
+            this.CannedResponses.FormattingEnabled = true;
+            this.CannedResponses.Items.AddRange(new object[] {
+            "SIM not found",
+            "Database connection",
+            "License files"});
+            this.CannedResponses.Location = new System.Drawing.Point(257, 187);
+            this.CannedResponses.Name = "CannedResponses";
+            this.CannedResponses.Size = new System.Drawing.Size(17, 21);
+            this.CannedResponses.TabIndex = 21;
+            this.CannedResponses.SelectedIndexChanged += new System.EventHandler(this.CannedResponses_SelectedIndexChanged);
+            // 
             // CallInfo
             // 
             this.AcceptButton = this.buttonSend;
@@ -252,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(284, 245);
+            this.Controls.Add(this.CannedResponses);
             this.Controls.Add(this.DescriptionRequired);
             this.Controls.Add(this.AreaCodeRequired);
             this.Controls.Add(this.CompanyRequired);
@@ -304,5 +320,6 @@
         private System.Windows.Forms.Label CompanyRequired;
         private System.Windows.Forms.Label AreaCodeRequired;
         private System.Windows.Forms.Label DescriptionRequired;
+        private System.Windows.Forms.ComboBox CannedResponses;
     }
 }
