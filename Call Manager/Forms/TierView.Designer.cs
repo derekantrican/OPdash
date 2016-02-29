@@ -31,10 +31,30 @@
             this.components = new System.ComponentModel.Container();
             this.splitTableView = new System.Windows.Forms.SplitContainer();
             this.dataGridViewUnassigned = new System.Windows.Forms.DataGridView();
+            this.gUIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.engineerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.callBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._3CXSupportDBaseDataSet1 = new Call_Manager._3CXSupportDBaseDataSet1();
             this.labelMyTickets = new System.Windows.Forms.Label();
             this.dataGridViewMine = new System.Windows.Forms.DataGridView();
+            this.gUIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.phoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sIMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.engineerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operatorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.callBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.callsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.callsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -47,26 +67,6 @@
             this.callsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.callTableAdapter = new Call_Manager._3CXSupportDBaseDataSet1TableAdapters.CallTableAdapter();
             this.cXSupportDBaseDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gUIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.phoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sIMDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.engineerDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operatorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gUIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.engineerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitTableView)).BeginInit();
             this.splitTableView.Panel1.SuspendLayout();
             this.splitTableView.Panel2.SuspendLayout();
@@ -97,14 +97,12 @@
             // 
             this.splitTableView.Panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.splitTableView.Panel1.Controls.Add(this.dataGridViewUnassigned);
-            this.splitTableView.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitTableView.Panel2
             // 
             this.splitTableView.Panel2.BackColor = System.Drawing.Color.LightCyan;
             this.splitTableView.Panel2.Controls.Add(this.labelMyTickets);
             this.splitTableView.Panel2.Controls.Add(this.dataGridViewMine);
-            this.splitTableView.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitTableView.Size = new System.Drawing.Size(1055, 521);
             this.splitTableView.SplitterDistance = 188;
             this.splitTableView.TabIndex = 0;
@@ -130,184 +128,12 @@
             this.dataGridViewUnassigned.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewUnassigned.Name = "dataGridViewUnassigned";
             this.dataGridViewUnassigned.ReadOnly = true;
+            this.dataGridViewUnassigned.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewUnassigned.ShowEditingIcon = false;
             this.dataGridViewUnassigned.Size = new System.Drawing.Size(1049, 182);
             this.dataGridViewUnassigned.TabIndex = 16;
             this.dataGridViewUnassigned.DataSourceChanged += new System.EventHandler(this.dataGridViewUnassigned_DataSourceChanged);
             this.dataGridViewUnassigned.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUnassigned_CellClick);
-            // 
-            // callBindingSource
-            // 
-            this.callBindingSource.DataMember = "Call";
-            this.callBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
-            // 
-            // _3CXSupportDBaseDataSet1
-            // 
-            this._3CXSupportDBaseDataSet1.DataSetName = "_3CXSupportDBaseDataSet1";
-            this._3CXSupportDBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // labelMyTickets
-            // 
-            this.labelMyTickets.AutoSize = true;
-            this.labelMyTickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMyTickets.Location = new System.Drawing.Point(12, 1);
-            this.labelMyTickets.Name = "labelMyTickets";
-            this.labelMyTickets.Size = new System.Drawing.Size(109, 24);
-            this.labelMyTickets.TabIndex = 1;
-            this.labelMyTickets.Text = "My Tickets";
-            // 
-            // dataGridViewMine
-            // 
-            this.dataGridViewMine.AllowUserToAddRows = false;
-            this.dataGridViewMine.AllowUserToDeleteRows = false;
-            this.dataGridViewMine.AutoGenerateColumns = false;
-            this.dataGridViewMine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gUIDDataGridViewTextBoxColumn1,
-            this.timeDataGridViewImageColumn1,
-            this.phoneDataGridViewTextBoxColumn1,
-            this.customerDataGridViewTextBoxColumn1,
-            this.companyDataGridViewTextBoxColumn1,
-            this.sIMDataGridViewTextBoxColumn1,
-            this.ticketDataGridViewTextBoxColumn1,
-            this.descriptionDataGridViewTextBoxColumn1,
-            this.engineerDataGridViewTextBoxColumn1,
-            this.operatorDataGridViewTextBoxColumn1});
-            this.dataGridViewMine.DataSource = this.callBindingSource1;
-            this.dataGridViewMine.Location = new System.Drawing.Point(3, 27);
-            this.dataGridViewMine.Name = "dataGridViewMine";
-            this.dataGridViewMine.ReadOnly = true;
-            this.dataGridViewMine.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridViewMine.ShowEditingIcon = false;
-            this.dataGridViewMine.Size = new System.Drawing.Size(1049, 299);
-            this.dataGridViewMine.TabIndex = 0;
-            // 
-            // callBindingSource1
-            // 
-            this.callBindingSource1.DataMember = "Call";
-            this.callBindingSource1.DataSource = this._3CXSupportDBaseDataSet1;
-            // 
-            // callsBindingSource
-            // 
-            this.callsBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
-            this.callsBindingSource.Position = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // callManagerDataSet
-            // 
-            this.callManagerDataSet.DataSetName = "CallManagerDataSet";
-            this.callManagerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // callManagerDataSetBindingSource
-            // 
-            this.callManagerDataSetBindingSource.DataSource = this.callManagerDataSet;
-            this.callManagerDataSetBindingSource.Position = 0;
-            // 
-            // callsTableAdapter
-            // 
-            this.callsTableAdapter.ClearBeforeFill = true;
-            // 
-            // _3CXSupportDBaseDataSet
-            // 
-            this._3CXSupportDBaseDataSet.DataSetName = "_3CXSupportDBaseDataSet";
-            this._3CXSupportDBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // callsBindingSource2
-            // 
-            this.callsBindingSource2.DataMember = "Calls";
-            this.callsBindingSource2.DataSource = this._3CXSupportDBaseDataSet;
-            // 
-            // callTableAdapter
-            // 
-            this.callTableAdapter.ClearBeforeFill = true;
-            // 
-            // cXSupportDBaseDataSet1BindingSource
-            // 
-            this.cXSupportDBaseDataSet1BindingSource.DataSource = this._3CXSupportDBaseDataSet1;
-            this.cXSupportDBaseDataSet1BindingSource.Position = 0;
-            // 
-            // gUIDDataGridViewTextBoxColumn1
-            // 
-            this.gUIDDataGridViewTextBoxColumn1.DataPropertyName = "GUID";
-            this.gUIDDataGridViewTextBoxColumn1.HeaderText = "GUID";
-            this.gUIDDataGridViewTextBoxColumn1.Name = "gUIDDataGridViewTextBoxColumn1";
-            this.gUIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.gUIDDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // timeDataGridViewImageColumn1
-            // 
-            this.timeDataGridViewImageColumn1.DataPropertyName = "Time";
-            this.timeDataGridViewImageColumn1.HeaderText = "Time";
-            this.timeDataGridViewImageColumn1.Name = "timeDataGridViewImageColumn1";
-            this.timeDataGridViewImageColumn1.ReadOnly = true;
-            this.timeDataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.timeDataGridViewImageColumn1.Visible = false;
-            // 
-            // phoneDataGridViewTextBoxColumn1
-            // 
-            this.phoneDataGridViewTextBoxColumn1.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn1.HeaderText = "Phone";
-            this.phoneDataGridViewTextBoxColumn1.Name = "phoneDataGridViewTextBoxColumn1";
-            this.phoneDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.phoneDataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // customerDataGridViewTextBoxColumn1
-            // 
-            this.customerDataGridViewTextBoxColumn1.DataPropertyName = "Customer";
-            this.customerDataGridViewTextBoxColumn1.HeaderText = "Customer";
-            this.customerDataGridViewTextBoxColumn1.Name = "customerDataGridViewTextBoxColumn1";
-            this.customerDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // companyDataGridViewTextBoxColumn1
-            // 
-            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
-            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
-            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
-            this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.companyDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // sIMDataGridViewTextBoxColumn1
-            // 
-            this.sIMDataGridViewTextBoxColumn1.DataPropertyName = "SIM";
-            this.sIMDataGridViewTextBoxColumn1.HeaderText = "SIM";
-            this.sIMDataGridViewTextBoxColumn1.Name = "sIMDataGridViewTextBoxColumn1";
-            this.sIMDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.sIMDataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // ticketDataGridViewTextBoxColumn1
-            // 
-            this.ticketDataGridViewTextBoxColumn1.DataPropertyName = "Ticket";
-            this.ticketDataGridViewTextBoxColumn1.HeaderText = "Ticket";
-            this.ticketDataGridViewTextBoxColumn1.Name = "ticketDataGridViewTextBoxColumn1";
-            this.ticketDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.ticketDataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // descriptionDataGridViewTextBoxColumn1
-            // 
-            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
-            this.descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.descriptionDataGridViewTextBoxColumn1.Width = 415;
-            // 
-            // engineerDataGridViewTextBoxColumn1
-            // 
-            this.engineerDataGridViewTextBoxColumn1.DataPropertyName = "Engineer";
-            this.engineerDataGridViewTextBoxColumn1.HeaderText = "Engineer";
-            this.engineerDataGridViewTextBoxColumn1.Name = "engineerDataGridViewTextBoxColumn1";
-            this.engineerDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // operatorDataGridViewTextBoxColumn1
-            // 
-            this.operatorDataGridViewTextBoxColumn1.DataPropertyName = "Operator";
-            this.operatorDataGridViewTextBoxColumn1.HeaderText = "Operator";
-            this.operatorDataGridViewTextBoxColumn1.Name = "operatorDataGridViewTextBoxColumn1";
-            this.operatorDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // gUIDDataGridViewTextBoxColumn
             // 
@@ -387,6 +213,179 @@
             this.operatorDataGridViewTextBoxColumn.HeaderText = "Operator";
             this.operatorDataGridViewTextBoxColumn.Name = "operatorDataGridViewTextBoxColumn";
             this.operatorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // callBindingSource
+            // 
+            this.callBindingSource.DataMember = "Call";
+            this.callBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
+            // 
+            // _3CXSupportDBaseDataSet1
+            // 
+            this._3CXSupportDBaseDataSet1.DataSetName = "_3CXSupportDBaseDataSet1";
+            this._3CXSupportDBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // labelMyTickets
+            // 
+            this.labelMyTickets.AutoSize = true;
+            this.labelMyTickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMyTickets.Location = new System.Drawing.Point(12, 1);
+            this.labelMyTickets.Name = "labelMyTickets";
+            this.labelMyTickets.Size = new System.Drawing.Size(109, 24);
+            this.labelMyTickets.TabIndex = 1;
+            this.labelMyTickets.Text = "My Tickets";
+            // 
+            // dataGridViewMine
+            // 
+            this.dataGridViewMine.AllowUserToAddRows = false;
+            this.dataGridViewMine.AllowUserToDeleteRows = false;
+            this.dataGridViewMine.AutoGenerateColumns = false;
+            this.dataGridViewMine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gUIDDataGridViewTextBoxColumn1,
+            this.timeDataGridViewImageColumn1,
+            this.phoneDataGridViewTextBoxColumn1,
+            this.customerDataGridViewTextBoxColumn1,
+            this.companyDataGridViewTextBoxColumn1,
+            this.sIMDataGridViewTextBoxColumn1,
+            this.ticketDataGridViewTextBoxColumn1,
+            this.descriptionDataGridViewTextBoxColumn1,
+            this.engineerDataGridViewTextBoxColumn1,
+            this.operatorDataGridViewTextBoxColumn1});
+            this.dataGridViewMine.DataSource = this.callBindingSource1;
+            this.dataGridViewMine.Location = new System.Drawing.Point(3, 27);
+            this.dataGridViewMine.Name = "dataGridViewMine";
+            this.dataGridViewMine.ReadOnly = true;
+            this.dataGridViewMine.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewMine.ShowEditingIcon = false;
+            this.dataGridViewMine.Size = new System.Drawing.Size(1049, 299);
+            this.dataGridViewMine.TabIndex = 0;
+            // 
+            // gUIDDataGridViewTextBoxColumn1
+            // 
+            this.gUIDDataGridViewTextBoxColumn1.DataPropertyName = "GUID";
+            this.gUIDDataGridViewTextBoxColumn1.HeaderText = "GUID";
+            this.gUIDDataGridViewTextBoxColumn1.Name = "gUIDDataGridViewTextBoxColumn1";
+            this.gUIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.gUIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // timeDataGridViewImageColumn1
+            // 
+            this.timeDataGridViewImageColumn1.DataPropertyName = "Time";
+            this.timeDataGridViewImageColumn1.HeaderText = "Time";
+            this.timeDataGridViewImageColumn1.Name = "timeDataGridViewImageColumn1";
+            this.timeDataGridViewImageColumn1.ReadOnly = true;
+            this.timeDataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.timeDataGridViewImageColumn1.Visible = false;
+            // 
+            // phoneDataGridViewTextBoxColumn1
+            // 
+            this.phoneDataGridViewTextBoxColumn1.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn1.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn1.Name = "phoneDataGridViewTextBoxColumn1";
+            this.phoneDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.phoneDataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // customerDataGridViewTextBoxColumn1
+            // 
+            this.customerDataGridViewTextBoxColumn1.DataPropertyName = "Customer";
+            this.customerDataGridViewTextBoxColumn1.HeaderText = "Customer";
+            this.customerDataGridViewTextBoxColumn1.Name = "customerDataGridViewTextBoxColumn1";
+            this.customerDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // companyDataGridViewTextBoxColumn1
+            // 
+            this.companyDataGridViewTextBoxColumn1.DataPropertyName = "Company";
+            this.companyDataGridViewTextBoxColumn1.HeaderText = "Company";
+            this.companyDataGridViewTextBoxColumn1.Name = "companyDataGridViewTextBoxColumn1";
+            this.companyDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.companyDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // sIMDataGridViewTextBoxColumn1
+            // 
+            this.sIMDataGridViewTextBoxColumn1.DataPropertyName = "SIM";
+            this.sIMDataGridViewTextBoxColumn1.HeaderText = "SIM";
+            this.sIMDataGridViewTextBoxColumn1.Name = "sIMDataGridViewTextBoxColumn1";
+            this.sIMDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.sIMDataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // ticketDataGridViewTextBoxColumn1
+            // 
+            this.ticketDataGridViewTextBoxColumn1.DataPropertyName = "Ticket";
+            this.ticketDataGridViewTextBoxColumn1.HeaderText = "Ticket";
+            this.ticketDataGridViewTextBoxColumn1.Name = "ticketDataGridViewTextBoxColumn1";
+            this.ticketDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.ticketDataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // descriptionDataGridViewTextBoxColumn1
+            // 
+            this.descriptionDataGridViewTextBoxColumn1.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
+            this.descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn1.Width = 415;
+            // 
+            // engineerDataGridViewTextBoxColumn1
+            // 
+            this.engineerDataGridViewTextBoxColumn1.DataPropertyName = "Engineer";
+            this.engineerDataGridViewTextBoxColumn1.HeaderText = "Engineer";
+            this.engineerDataGridViewTextBoxColumn1.Name = "engineerDataGridViewTextBoxColumn1";
+            this.engineerDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // operatorDataGridViewTextBoxColumn1
+            // 
+            this.operatorDataGridViewTextBoxColumn1.DataPropertyName = "Operator";
+            this.operatorDataGridViewTextBoxColumn1.HeaderText = "Operator";
+            this.operatorDataGridViewTextBoxColumn1.Name = "operatorDataGridViewTextBoxColumn1";
+            this.operatorDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // callBindingSource1
+            // 
+            this.callBindingSource1.DataMember = "Call";
+            this.callBindingSource1.DataSource = this._3CXSupportDBaseDataSet1;
+            // 
+            // callsBindingSource
+            // 
+            this.callsBindingSource.DataSource = this._3CXSupportDBaseDataSet1;
+            this.callsBindingSource.Position = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // callManagerDataSet
+            // 
+            this.callManagerDataSet.DataSetName = "CallManagerDataSet";
+            this.callManagerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // callManagerDataSetBindingSource
+            // 
+            this.callManagerDataSetBindingSource.DataSource = this.callManagerDataSet;
+            this.callManagerDataSetBindingSource.Position = 0;
+            // 
+            // callsTableAdapter
+            // 
+            this.callsTableAdapter.ClearBeforeFill = true;
+            // 
+            // _3CXSupportDBaseDataSet
+            // 
+            this._3CXSupportDBaseDataSet.DataSetName = "_3CXSupportDBaseDataSet";
+            this._3CXSupportDBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // callsBindingSource2
+            // 
+            this.callsBindingSource2.DataMember = "Calls";
+            this.callsBindingSource2.DataSource = this._3CXSupportDBaseDataSet;
+            // 
+            // callTableAdapter
+            // 
+            this.callTableAdapter.ClearBeforeFill = true;
+            // 
+            // cXSupportDBaseDataSet1BindingSource
+            // 
+            this.cXSupportDBaseDataSet1BindingSource.DataSource = this._3CXSupportDBaseDataSet1;
+            this.cXSupportDBaseDataSet1BindingSource.Position = 0;
             // 
             // TierView
             // 
