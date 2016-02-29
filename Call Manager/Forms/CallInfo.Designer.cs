@@ -54,7 +54,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(197, 214);
+            this.buttonSend.Location = new System.Drawing.Point(203, 252);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(75, 23);
             this.buttonSend.TabIndex = 9;
@@ -126,7 +126,7 @@
             this.textBoxDescription.MaxLength = 140;
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(153, 40);
+            this.textBoxDescription.Size = new System.Drawing.Size(153, 83);
             this.textBoxDescription.TabIndex = 8;
             // 
             // textBoxSIMNo
@@ -169,7 +169,7 @@
             // 
             this.labelSuccess.AutoSize = true;
             this.labelSuccess.ForeColor = System.Drawing.Color.Red;
-            this.labelSuccess.Location = new System.Drawing.Point(100, 219);
+            this.labelSuccess.Location = new System.Drawing.Point(100, 262);
             this.labelSuccess.Name = "labelSuccess";
             this.labelSuccess.Size = new System.Drawing.Size(37, 13);
             this.labelSuccess.TabIndex = 13;
@@ -199,7 +199,7 @@
             // checkBoxPersistent
             // 
             this.checkBoxPersistent.AutoSize = true;
-            this.checkBoxPersistent.Location = new System.Drawing.Point(13, 216);
+            this.checkBoxPersistent.Location = new System.Drawing.Point(13, 259);
             this.checkBoxPersistent.Name = "checkBoxPersistent";
             this.checkBoxPersistent.Size = new System.Drawing.Size(72, 17);
             this.checkBoxPersistent.TabIndex = 16;
@@ -253,8 +253,11 @@
             this.CannedResponses.Items.AddRange(new object[] {
             "SIM not found",
             "Database connection",
-            "License files"});
-            this.CannedResponses.Location = new System.Drawing.Point(257, 187);
+            "Installation",
+            "License files",
+            "SIM Programmed",
+            "No material match"});
+            this.CannedResponses.Location = new System.Drawing.Point(257, 230);
             this.CannedResponses.Name = "CannedResponses";
             this.CannedResponses.Size = new System.Drawing.Size(17, 21);
             this.CannedResponses.TabIndex = 21;
@@ -266,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(284, 245);
+            this.ClientSize = new System.Drawing.Size(284, 287);
             this.Controls.Add(this.CannedResponses);
             this.Controls.Add(this.DescriptionRequired);
             this.Controls.Add(this.AreaCodeRequired);

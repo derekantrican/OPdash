@@ -158,6 +158,18 @@ namespace Call_Manager
             {
                 textBoxDescription.Text = "Trouble connecting to the database";
             }
+            else if (CannedResponses.SelectedItem.ToString() == "SIM Programmed")
+            {
+                textBoxDescription.Text = "\"The SIM needs to be programmed over the network\"";
+            }
+            else if (CannedResponses.SelectedItem.ToString() == "No material match")
+            {
+                textBoxDescription.Text = "User is getting a \"No matching material in tec file\" error";
+            }
+            else if (CannedResponses.SelectedItem.ToString() == "Installation")
+            {
+                textBoxDescription.Text = "User wants help installing SigmaNEST";
+            }
         }
     }
 }
