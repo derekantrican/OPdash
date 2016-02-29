@@ -21,7 +21,15 @@ namespace Call_Manager
             Application.SetCompatibleTextRenderingDefault(false);
 
             MasterView ViewWindow = new MasterView();
-            ViewWindow.Show();
+            try
+            {
+                ViewWindow.Show();
+            }
+            catch
+            {
+                Console.WriteLine("Could not display window");
+                return;
+            }
             Application.Run();
         }
     }

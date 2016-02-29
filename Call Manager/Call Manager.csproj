@@ -62,6 +62,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CallManagerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMode.Designer.cs">
+      <DependentUpon>AdminMode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CallInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_3CXSupportDBaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AdminMode.resx">
+      <DependentUpon>AdminMode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Browser.resx">
       <DependentUpon>Browser.cs</DependentUpon>
     </EmbeddedResource>

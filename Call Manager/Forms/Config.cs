@@ -34,5 +34,10 @@ namespace Call_Manager.Forms
         {
             Process.Start("https://github.com/derekantrican/Call-Manager/issues/new");
         }
+
+        private void Config_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

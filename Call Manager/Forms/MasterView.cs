@@ -18,7 +18,9 @@ namespace Call_Manager
         public MasterView()
         {
             InitializeComponent();
-            
+
+            pictureBoxLogo.Click += new EventHandler(adminMode);
+
             this.FormClosing += MasterView_FormClosing;
 
             string sqlServer = Resources.UserSettings.Default.Server;
@@ -30,7 +32,21 @@ namespace Call_Manager
 
             using (SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) from Engineers where AE like @username", conn))
             {
-                conn.Open();
+                try
+                {
+                    conn.Open();
+                }
+                catch
+                {
+                    DialogResult result = MessageBox.Show("Couldn't connect to database","Failed to connect",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+                    if (result == DialogResult.OK || result == DialogResult.Cancel)
+                    {
+                        this.Close();
+                        return;
+                    }
+                }
+
                 sqlCommand.Parameters.AddWithValue("@username", Environment.UserName);
                 int userCount = (int)sqlCommand.ExecuteScalar();
 
@@ -99,6 +115,15 @@ namespace Call_Manager
             labelOperatorTab.BackColor = System.Drawing.Color.Blue;
             labelTierTab.Enabled = false;
             labelOperatorTab.Enabled = true;
+        }
+
+        private void adminMode(object sender, EventArgs e)
+        {
+            if (Form.ModifierKeys == Keys.Control)
+            {
+                AdminMode admin = new AdminMode();
+                admin.Show();
+            }
         }
 
         private void MasterView_Load(object sender, EventArgs e)
